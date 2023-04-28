@@ -14,8 +14,11 @@ Ce projet est un simple Stack MERN qui sert d'entrainement et de rendu pour le c
 - 🟢[Node.js](https://nodejs.org/en)
 - 🍃[MongoDB](https://www.mongodb.com/fr-fr)
 
+## ♻ Prérequis  
+Pour ce projet, il est nécessaire d'avoir installé
 
-
+- 🐳Docker (https://docs.docker.com/engine/install/)
+- 🐋Docker Desktop (https://www.docker.com/products/docker-desktop/)
 ## 🔧 Mise en route    
 
 Tout est mis en place pour un fonctionnement on the go, sauf bien sûr l'accès en base de données.
@@ -50,7 +53,21 @@ docker-compose up
 Cela va build tous les dockers et les connecter ensemble, il sera possible de voir donc les logs et si la base de données est bien connectée.
 
 
+## Points à améliorer 👍
+Ici une liste des améliorations (connues) à apporter dans le projet
 
+- Moins de verbose de MongoDB dans le build
+- Un script pour tester la connectivité de MongoDB
+- Une application type MERN full
+- Une image personnelle venant de Dockerhub
+- meilleure structure du projet ?
+- meilleure protection des données importantes
+
+## Difficultés rencontrées ❌
+- Construire une application stable entre toutes les technologies impliquées
+- Garder une lisibilité dans la structure du projet (plusieurs Dockerfile, node-modules, ...)
+- Avoir les bons volumes pour chaque partie dans le Docker-compose
+- Occulter les données importantes
 
 ----------
 Fait avec [Readmi Editor](https://readmi.xyz/editor) 🍰
