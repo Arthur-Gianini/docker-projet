@@ -20,9 +20,16 @@ Ce projet est un simple Stack MERN qui sert d'entrainement et de rendu pour le c
 
 Tout est mis en place pour un fonctionnement on the go, sauf bien sûr l'accès en base de données.
 
+### Cloner
+
+La toute première étape est de cloner le projet avec le bouton vert "<> Code" et avec le lien HTTPS obtenu faire un :
+```bash
+git clone https://github.com/Arthur-Gianini/docker-projet.git
+```
+
 ### Connection à la BD
 
-La première étape est de créer un fichier .env à la racine du projet avec le contenu suivant :
+Ensuite nous devons créer un fichier .env à la racine du projet avec le contenu suivant :
 
 ```Dotenv
 DB = mongodb+srv://<username>:<password>@cluster0.o2yktuk.mongodb.net/?retryWrites=true&w=majority
