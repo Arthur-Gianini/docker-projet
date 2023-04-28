@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  react:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    volumes:
+      - ./client:/client
+      - /client/node_modules
+    ports:
+      - 3000:3000
+    depends_on:
+      - node
+    environment:
+    # Enabling hot reload
+      - CHOKIDAR_USEPOLLING=true
+
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/server:ro # Adding the read-only option
+      - /server/node_modules
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    command: mongod --quiet
+    env_file:
+      - .env
+    volumes:
+      - mongoDB:/data/db
+  redis:
+    image: redis
+
+
+
+volumes:
+  nodeVolume:
+  mongoDB:
